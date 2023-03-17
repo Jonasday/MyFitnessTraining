@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import fr.jd.fitnessDev.model.Plat;
 import fr.jd.fitnessDev.model.Seance;
 import fr.jd.fitnessDev.model.Utilisateur;
+import fr.jd.fitnessDev.repository.SeanceRepository;
 import fr.jd.fitnessDev.repository.UtilisateurRepository;
 import fr.jd.fitnessDev.service.UtilisateurService;
 
@@ -16,6 +17,10 @@ import fr.jd.fitnessDev.service.UtilisateurService;
 public class UtilisateurServiceImpl implements UtilisateurService {
 
     private final UtilisateurRepository utilisateurRepository;
+    
+    public UtilisateurServiceImpl(UtilisateurRepository utilisateurRepository) {
+        this.utilisateurRepository = utilisateurRepository;
+    }
 
     @Override
     public Utilisateur create(Utilisateur utilisateur) {

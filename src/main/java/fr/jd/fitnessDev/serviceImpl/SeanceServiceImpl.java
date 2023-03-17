@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import fr.jd.fitnessDev.model.Exercice;
 import fr.jd.fitnessDev.model.Seance;
+import fr.jd.fitnessDev.repository.IngredientRepository;
 import fr.jd.fitnessDev.repository.SeanceRepository;
 import fr.jd.fitnessDev.service.SeanceService;
 
@@ -15,6 +16,10 @@ import fr.jd.fitnessDev.service.SeanceService;
 public class SeanceServiceImpl implements SeanceService {
 
     private final SeanceRepository seanceRepository;
+    
+    public SeanceServiceImpl(SeanceRepository seanceRepository) {
+        this.seanceRepository = seanceRepository;
+    }
 
     @Override
     public Seance create(Seance seance) {

@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import fr.jd.fitnessDev.model.Ingredient;
+import fr.jd.fitnessDev.repository.ExerciceRepository;
 import fr.jd.fitnessDev.repository.IngredientRepository;
 import fr.jd.fitnessDev.service.IngredientService;
 
@@ -12,6 +13,10 @@ import fr.jd.fitnessDev.service.IngredientService;
 public class IngredientServiceImpl implements IngredientService {
 
     private final IngredientRepository ingredientRepository;
+    
+    public IngredientServiceImpl(IngredientRepository ingredientRepository) {
+        this.ingredientRepository = ingredientRepository;
+    }
     
     @Override
     public Ingredient create(Ingredient ingredient) {

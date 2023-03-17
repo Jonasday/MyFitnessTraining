@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import fr.jd.fitnessDev.model.Ingredient;
 import fr.jd.fitnessDev.model.Plat;
+import fr.jd.fitnessDev.repository.IngredientRepository;
 import fr.jd.fitnessDev.repository.PlatRepository;
 import fr.jd.fitnessDev.service.PlatService;
 
@@ -14,6 +15,10 @@ import fr.jd.fitnessDev.service.PlatService;
 public class PlatServiceImpl implements PlatService {
 
     private final PlatRepository platRepository;
+    
+    public PlatServiceImpl(PlatRepository platRepository) {
+        this.platRepository = platRepository;
+    }
 
     @Override
     public Plat create(Plat plat) {
