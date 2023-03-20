@@ -23,7 +23,11 @@ public class Utilisateur {
 
 	@Column(length = 50, nullable = false)
 	private String prenom;
+	
+	@Column(length = 50, nullable = false)
+	private String mdp;
 
+	private String email;
 	private Genre genre;
 	private int age;
 	private int taille;
@@ -76,6 +80,26 @@ public class Utilisateur {
 	}
 
 
+	public String getMdp() {
+		return mdp;
+	}
+
+
+	public void setMdp(String mdp) {
+		this.mdp = mdp;
+	}
+	
+	
+	public String getEmail() {
+		return email;
+	}
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
+	
 	public Genre getGenre() {
 		return genre;
 	}

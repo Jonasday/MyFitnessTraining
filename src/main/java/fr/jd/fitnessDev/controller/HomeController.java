@@ -15,5 +15,10 @@ public class HomeController {
     public String login(){
         return "login";
     } 
+	
+	@GetMapping("/creer_compte")
+    public String account(){
+        return "creerCompte";
+    }
 
 }

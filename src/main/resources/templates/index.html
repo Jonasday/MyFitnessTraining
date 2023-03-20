@@ -2,12 +2,26 @@
 <html xmlns:th="https://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8" />
-<link rel="stylesheet" href="/src/main/resources/static/style.css" />
+<link th:href="@{/css/main.css}" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <title>FitnessDev</title>
 </head>
 <body>
+	
+	
 	<h1>My Fitness Training</h1>
 	
+	<div class="flex-container">
+		<div class="go training" id="test"></div>
+	
+		<div class="go food"></div>
+	</div>
+		
 	<button class="btn"><a href="/login">Se connecter</a></button>
+	<button class="btn"><a href="/mes_seances">TRAINING</a></button>
+	<button class="btn">FOOD</button>
+	
 </body>
 </html>
