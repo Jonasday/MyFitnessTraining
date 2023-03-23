@@ -1,9 +1,15 @@
 @charset "UTF-8";
 
-
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-	background-color: rgb(50, 48, 59);
+	background-color: grey;
 	text-align: center;
 }
 
@@ -27,35 +33,6 @@ button {
 
 a {
 	text-decoration: none;
-	font-size: 18px;
-	color: #fff;
+	color: rgb(50, 48, 59);
 }
 
-.flex-container {
-	max-width: 700px;
-	margin: 0 auto;
-	display:flex;
-	justify-content: space-between;
-}
-
-.go {
-	display:inline;
-	background-color: #222;
-	width: 300px;
-	height: 450px;
-	margin-bottom: 25px;
-	border: 5px solid #fff;
-	border-radius: 3px;
-}
-
-.training {
-  background-image: url(/images/index_training.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-.food {
-  background-image: url(/images/index_food.jpg);
-  background-size: cover;
-  background-position: center;
-}

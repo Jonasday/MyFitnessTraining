@@ -13,12 +13,12 @@ public class SeanceController {
 	private SeanceService seanceService;
 	private UtilisateurService utilisateurService;
 	
-	@GetMapping("/mes_seances")
+	@GetMapping("/mes-seances")
     public String readSeances(){
         return "mesSeances";
     } 
 	
-	@GetMapping("/creer_seance")
+	@GetMapping("/creer-seance")
     public String createSeance(){
         return "creerSeance";
     }

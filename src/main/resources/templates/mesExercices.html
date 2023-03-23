@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<title>My Fitness Training - Mes Exercices</title>
+</head>
+<body>
+
+	<div class="container">
+
+<header>
+
+	<h1>Mes Exercices</h1>
+	
+	<nav class="navigation">
+		<ul>
+			<li><a th:href="@{/}">Accueil</a></li>
+			<li><a th:href="@{/creer-exercice}">Créer un exercice</a></li>
+			<li><a th:href="@{/mes-seances}">Voir mes séances</a></li>
+		</ul>
+	</nav>
+
+</header>
+
+<main>
+
+	<h5>Tous mes exercices :</h5>
+	<hr/>
+	<table class="table table-bordered table-striped">
+		
+		<thead>
+			<tr>
+				<th>Nom</th>
+				<th>Muscle</th>
+				<th>Poids (kg)</th>
+				<th>Séries</th>
+				<th>Répétitions</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="exercice : ${allExercices}">
+				<td th:text="${exercice.nom}"></td>
+				<td th:text="${exercice.muscle}"></td>
+				<td th:text="${exercice.poids}"></td>
+				<td th:text="${exercice.serie}"></td>
+				<td th:text="${exercice.rep}"></td>
+				<td>
+					<a th:href="@{/details-exercice(id=${exercice.id})}" class="btn btn-info">Voir</a>
+					<a th:href="@{/supprimer-exercice(id=${exercice.id})}" class="btn btn-danger">X</a>
+				</td>
+				
+			</tr>
+		</tbody>
+		
+	</table>
+</main>	
+</div>
+</body>
+</html>

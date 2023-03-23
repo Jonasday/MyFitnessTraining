@@ -7,6 +7,8 @@ import fr.jd.fitnessDev.model.Exercice;
 public interface ExerciceService {
     
     Exercice create(Exercice exercice);
+    
+    Exercice detail(Long id);
 
     List<Exercice> read();
 

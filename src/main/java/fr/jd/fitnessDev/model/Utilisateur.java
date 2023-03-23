@@ -1,10 +1,14 @@
 package fr.jd.fitnessDev.model;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -28,6 +32,8 @@ public class Utilisateur {
 	private String mdp;
 
 	private String email;
+	
+	@Enumerated(EnumType.STRING)
 	private Genre genre;
 	private int age;
 	private int taille;
@@ -168,6 +174,6 @@ public class Utilisateur {
 	public void setLstSeance(List<Seance> lstSeance) {
 		this.lstSeance = lstSeance;
 	}
-	
-	
+
+
 }

@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <link th:href="@{/css/main.css}" rel="stylesheet"/>
+<link th:href="@{/css/index.css}" rel="stylesheet"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -14,14 +15,12 @@
 	<h1>My Fitness Training</h1>
 	
 	<div class="flex-container">
-		<div class="go training" id="test"></div>
+		<div class="go training" id="test"><a href="/mes-seances">TRAINING</a></div>
 	
-		<div class="go food"></div>
+		<div class="go food"><a href="/mes-seances">FOOD</a></div>
 	</div>
 		
-	<button class="btn"><a href="/login">Se connecter</a></button>
-	<button class="btn"><a href="/mes_seances">TRAINING</a></button>
-	<button class="btn">FOOD</button>
+	<button class="btn-login"><a href="/login">Se connecter</a></button>
 	
 </body>
 </html>

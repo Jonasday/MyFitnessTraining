@@ -1,0 +1,50 @@
+<meta charset="UTF-8">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+	rel="stylesheet">
+<title th:text="'My Fitness Training - ' + ${exercice.nom}"></title>
+</head>
+<body>
+	<div class="container">
+		<header>
+
+			<h1 th:text="${exercice.nom}"></h1>
+			<hr />
+			<nav class="navigation">
+				<ul>
+					<li><a th:href="@{/}">Accueil</a></li>
+					<li><a th:href="@{/mes-seances}">Mes séances</a></li>
+					<li><a th:href="@{/mes-exercices}">Voir mes exercices</a></li>
+				</ul>
+			</nav>
+
+		</header>
+
+		<main>
+
+			<p th:text="'Nom : ' + ${exercice.nom}"></p>
+
+			<p th:text="'Image : ' + ${exercice.image}"></p>
+
+			<p th:text="'Muscle : ' + ${exercice.muscle}"></p>
+
+			<p th:text="'Poids (kg) : ' + ${exercice.poids}"></p>
+
+			<p th:text="'Séries : ' + ${exercice.serie}"></p>
+
+			<p th:text="'Répétitions : ' + ${exercice.rep}"></p>
+
+			<a th:href="@{/exercice-modification(id=${exercice.id})}" class="btn btn-primary">Modifier</a>
+			<a th:href="@{/supprimer-exercice(id=${exercice.id})}"
+				class="btn btn-danger">Supprimer</a>
+
+		</main>
+	</div>
+</body>
+</html>

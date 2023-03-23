@@ -3,32 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <link th:href="@{/css/main.css}" rel="stylesheet"/>
+<link th:href="@{/css/login.css}" rel="stylesheet"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <title>FitnessDev - Login</title>
 </head>
 <body>
 	<h1>Se connecter</h1>
 	
+	<div class="container">
 	<form action="" method="get" class="form-login">
-	<label for="name">Nom :
-	</label>
-	<input type="text" name="name" id="name" required>
 	
-	<label for="firstname">Prénom :
-	</label>
-	<input type="text" name="firstname" id="firstname" required>
-	
-	<label for="password">Mot de Passe :
-	</label>
-	<input type="text" name="password" id="password" required>
-	
-	<button type="submit" class="btn-create-account">Valider</button>
-	<button type="reset" class="btn-reset">Annuler</button>
+		<div class="form nom">
+			<label for="email">Email
+			</label>
+			<input type="text" name="email" id="email" required>
+		</div>
+		<div class="form password">
+			<label for="password">Mot de Passe
+			</label>
+			<input type="text" name="password" id="password" required>
+		</div>
+		
+	<button type="submit" class="btn-validate">Valider</button>
+	<button type="reset" class="btn-reset"><a href="/">Annuler</a></button>
 </form>
 	
-	<button class="btn"><a href="/creer_compte">Créer un compte</a></button>
-	<button class="btn"><a href="/">Accueil</a></button>
+	<button class="btn-create-account"><a href="/creer-compte">Créer un compte</a></button>
+	
+	</div>
 </body>
 </html>

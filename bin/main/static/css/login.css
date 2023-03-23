@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+.container {
+	max-width:400px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+form {
+	background-color: #fff;
+	margin-bottom: 25px;
+	border: none;
+	box-shadow: 2px 2px 2px;
+	border-radius: 5px;
+}
+
+.form {
+	width: 100%;
+	margin: 25px 0;
+}
+
+label {
+	font-family:'Bebas Neue', cursive;
+	font-size: 18px;
+	padding: 20px;
+	margin: 20px;
+}
+
+input {
+	margin: 20px;
+	width: 60%;
+}
+
+.btn-validate, .btn-reset {
+	border: 1px solid #222;
+	box-shadow: 1px 1px 1px;
+	margin-bottom: 25px;
+}
+
+.btn-create-account {
+	margin-bottom: 35px;
+}

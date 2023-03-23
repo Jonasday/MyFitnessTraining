@@ -6,6 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.Lob;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
@@ -26,16 +27,16 @@ public class Exercice {
 	@ManyToOne @JoinColumn(name="idSeance")
 	private Seance seance;
 
+	
 	private byte[] image;
+	
 	private float poids = 0;
 	private int serie = 4;
 	private int rep = 10;
 	
 	//Constructor
-	public Exercice(long id, String nom) {
+	public Exercice() {
 		super();
-		this.id = id;
-		this.nom = nom;
 	}
 
 	//Getters & Setters

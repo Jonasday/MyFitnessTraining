@@ -1,7 +1,9 @@
 package fr.jd.fitnessDev.serviceImpl;
 
 import java.util.List;
+import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import fr.jd.fitnessDev.model.Exercice;
@@ -11,6 +13,7 @@ import fr.jd.fitnessDev.service.ExerciceService;
 @Service
 public class ExerciceServiceImpl implements ExerciceService {
 
+	@Autowired
     private final ExerciceRepository exerciceRepository;
     
     public ExerciceServiceImpl(ExerciceRepository exerciceRepository) {
@@ -20,6 +23,11 @@ public class ExerciceServiceImpl implements ExerciceService {
     @Override
     public Exercice create(Exercice exercice) {
         return exerciceRepository.save(exercice);
+    }
+    
+    @Override
+    public Exercice detail(Long id) {
+    	return exerciceRepository.findById(id).get();
     }
 
     @Override

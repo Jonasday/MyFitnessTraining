@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+	rel="stylesheet">
+<title>My Fitness Training - Créer un exercice</title>
+</head>
+<body>
+	<div class="container">
+		<header>
+
+			<h1>Créer un exercice</h1>
+			<hr/>
+			<nav class="navigation">
+				<ul>
+					<li><a th:href="@{/}">Accueil</a></li>
+					<li><a th:href="@{/mes-seances}">Mes séances</a></li>
+					<li><a th:href="@{/mes-exercices}">Voir mes exercices</a></li>
+				</ul>
+			</nav>
+
+		</header>
+
+		<main>
+
+				<form th:action="@{/save-exercice}" th:object="${exercice}" method="POST" class="form-create-exercice">
+
+					<label for="name">Nom de l'exercice : </label> <input type="text"
+						th:field="${exercice.nom}" id="name" class="form-control col-4 mb-4" required /> <label
+						for="image">Choisir une image : </label> <input type="file"
+						th:field="${exercice.image}" id="image" class="form-control col-4 mb-4"/> <label
+						for="muscle">Muscle : </label> <input type="text"
+						th:field="${exercice.muscle}" id="muscle" class="form-control col-4 mb-4" required />
+
+						<label for="name">Poids (kg) : </label> <input type="text"
+						th:field="${exercice.poids}" id="name" class="form-control col-4 mb-4" />
+						
+						<label for="name">Séries : </label> <input type="text"
+						th:field="${exercice.serie}" id="name" class="form-control col-4 mb-4" />
+						
+						<label for="name">Répétitions : </label> <input type="text"
+						th:field="${exercice.rep}" id="name" class="form-control col-4 mb-4" />
+
+					<button type="submit" class="btn btn-primary mb-4">Créer
+						l'exercice</button>
+					<button type="reset" class="btn btn-danger mb-4"><a th:href="@{/mes-exercices}">Annuler</a></button>
+				</form>
+
+		</main>
+	</div>
+</body>
+</html>

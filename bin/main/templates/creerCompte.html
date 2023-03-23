@@ -2,47 +2,70 @@
 <html xmlns:th="https://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<link th:href="@{/css/main.css}" rel="stylesheet"/>
+<link th:href="@{/css/main.css}" rel="stylesheet" />
+<link th:href="@{/css/creerCompte.css}" rel="stylesheet" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+	rel="stylesheet">
 <title>Créer un compte</title>
 </head>
 <body>
 
 	<h1>Créer mon compte</h1>
 
-<form action="" method="get" class="form-create-account">
-	<label for="name">Nom :
-	</label>
-	<input type="text" name="name" id="name" required>
-	
-	<label for="firstname">Prénom :
-	</label>
-	<input type="text" name="firstname" id="firstname" required>
-	
-	<label for="gender">Genre :
-	</label>
-	<input type="" name="gender" id="gender" required>
-	
-	<label for="age">Age :
-	</label>
-	<input type="number" name="age" id="age" required>
-	
-	<label for="size">Taille (en cm):
-	</label>
-	<input type="number" name="size" id="size" required>
-	
-	<label for="weigth">Poids (en kg):
-	</label>
-	<input type="number" name="weigth" id="weigth" required>
-	
-	<button type="submit" class="btn-create-account">Créer mon compte</button>
-	<button type="reset" class="btn-reset">Annuler</button>
-</form>
-
+	<div class="container">
+		<form action="" method="get" class="form-create-account">
+			<div class="form nom">
+				<label for="name">Nom </label> <input type="text" name="name"
+					id="name" required>
+			</div>
+			<div class="form prenom">
+				<label for="firstname">Prénom </label> <input type="text"
+					name="firstname" id="firstname" required>
+			</div>
+			<div class="form email">
+				<label for="email">Email </label> <input type="email" name="email"
+					id="email" required>
+			</div>
+			<div class="form genre">
+				<label for="gender">Genre </label> <input type="radio"
+					name="gender[]" id="homme" value="M"> <label> M </label> <input
+					type="radio" name="gender[]" id="femme" value="F"> <label>
+					F </label>
+			</div>
+			<div class="form age">
+				<label for="age">Age </label> <input type="number" name="age"
+					id="age" required>
+			</div>
+			<div class="form taille">
+				<label for="size">Taille (en cm) </label> <input type="number"
+					name="size" id="size" required>
+			</div>
+			<div class="form poids">
+				<label for="weigth">Poids (en kg) </label> <input type="number"
+					name="weigth" id="weigth" required>
+			</div>
+			<div class="form password">
+				<label for="password">Mot de passe </label> <input type="password"
+					name="password" id="password" required>
+			</div>
+			<div class="form confirmation">
+				<label for="confimation">Confirmation MDP </label> <input
+					type="password" name="confirmation" id="confirmation" required>
+			</div>
+			<button type="submit" class="btn-create-account">Créer mon
+				compte</button>
+			<button type="reset" class="btn-reset">
+				<a href="/">Annuler</a>
+			</button>
+		</form>
+	</div>
 	<p>Vous avez déjà un compte ?</p>
-	<button class="btn"><a href="/login">Se connecter</a></button>
+	<button class="btn-login">
+		<a href="/login">Se connecter</a>
+	</button>
 
 </body>
 </html>
